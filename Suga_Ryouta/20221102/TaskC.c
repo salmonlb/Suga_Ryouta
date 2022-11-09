@@ -5,10 +5,11 @@
 
 int main()
 {
-    time_t time(time_t * time);
-
+    //make random number
+    time_t time(time_t * time);         //get now time
     srand((unsigned int) time(NULL));
 
+    //make dataArray
     int data[10] = {0,0,0,0,0,0,0,0,0,0};
     int dataLength = sizeof data / sizeof data[0];
 

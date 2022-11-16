@@ -1,11 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <>
 
 int main()
 {
     int data[11];
     int datasize = sizeof data / sizeof data[0];
-
-    printf("Hi");
 
     for (int i = 0; i < datasize; i++){
             data[i] = i;
@@ -13,10 +13,10 @@ int main()
 
     for (int i = 0; i < datasize - 1; i++){
         int movevalue = data[i];
-        int target = ((rand())%datasize);
+        int target = rand() % datasize;
         
         while(target <= i){
-            target = ((rand())%datasize);
+            target = rand()% datasize;
         }
 
         int targetvalue = data[target];

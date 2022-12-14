@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<time.h>
+#include<stdlib.h>
 
 #define DATA_LENGTH 100
 
@@ -16,6 +17,10 @@ void showArray();
 void sortArray();
 
 int main(){
+
+    time_t time(time_t * time);
+    srand((unsigned int) time(NULL));
+
     for (int i = 0; i < DATA_LENGTH; i++){
         data[i] = rand() % DATA_LENGTH + 1;
     }
@@ -27,7 +32,7 @@ int main(){
     while (left < right){
         int mid = (left + right) / 2;
 
-        if (mid == target){
+        if (data[mid] == target){
             result = mid;
             break;
         }

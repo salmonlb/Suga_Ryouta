@@ -8,7 +8,8 @@ void push(int value){
 }
 
 void pop(){
-	data.erase(data.end());
+	data.erase(data.end() - 1);
+	//data.pop_back();
 }
 
 void showVector() {

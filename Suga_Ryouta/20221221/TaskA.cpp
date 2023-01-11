@@ -13,7 +13,7 @@ void pop(){
 
 void showVector() {
 	std::cout << "Vector is : ";
-	for (auto& value : data) {
+	for (auto value : data) {
 		std::cout << value;
 	}
 	std::cout << "\n";
@@ -21,14 +21,20 @@ void showVector() {
 
 int main() {
 
-	data.emplace_back(1);
+	push(1);
 	showVector();
-	data.emplace_back(3);
+	push(3);
 	showVector();
-	data.emplace_back(5);
+	push(5);
 	showVector();
-	data.emplace_back(7);
+	push(7);
 	showVector();
-	data.emplace_back(9);
+	push(9);
+	showVector();
+
+	pop();
+	showVector();
+
+	pop();
 	showVector();
 }
